@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<header class="header section">
+<header class="header section section_mt-0">
     <h1 hidden>Государственный музей изобразительных искусств имени А.С.Пушкина</h1>
     <a href="#main" class="button button_blue skip-to-main">Skip to main</a>
     <div class="header__inner">
@@ -61,18 +61,18 @@
             </button>
         </div>
     </div>
-    <nav class="main-nav"> <!-- TO DO: прописать, что это навигация по разделам -->
-        <a href="#museum" class="main-nav__item">Музей</a>
-        <a href="#visitors" class="main-nav__item">Посетителям</a>
-        <a href="#exhibitions" class="main-nav__item">Выставки и события</a>
-        <a href="/404.html" class="main-nav__item">Купить билет</a>
-        <a href="/404.html" class="main-nav__item">Стать другом</a>
-        <a href="/404.html" class="main-nav__item">Онлайн-магазин</a>
+    <nav class="main-nav" aria-label="Основные разделы сайта">
+        <a href="#exhibitions" class="link main-nav__item">Выставки и события</a>
+        <a href="#museum" class="link main-nav__item">Музей</a>
+        <a href="#visitors" class="link main-nav__item">Посетителям</a>
+        <a href="/404.html" class="link main-nav__item">Купить билет</a>
+        <a href="/404.html" class="link main-nav__item">Стать другом</a>
+        <a href="/404.html" class="link main-nav__item">Онлайн-магазин</a>
     </nav>
 </header>
 
-<main id="main" class="section">
-    <section class="glide" aria-roledescription="carousel" aria-label="Главные события музея">
+<main id="main">
+    <section class="section glide" id=exhibitions aria-roledescription="carousel" aria-label="Главные события музея">
         <div class="glide__arrows" data-glide-el="controls">
             <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
                 <span class="visually-hidden">Предыдущий слайд</span>
@@ -131,30 +131,148 @@
         </div>
     </section>
 
-    <section> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
-        <h2>Выставки и события</h2>
+    <!--<section> &lt;!&ndash; тут что-то нужно задать, чтобы заголовок был (или не нужно) &ndash;&gt;
+        <h2 class="title">Выставки и события</h2>
+    </section>-->
+
+    <section class="section"> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
+        <h2 class="title" id="museum">Музей</h2>
+
+        <!-- Tab links -->
+        <div class="tab" role="tablist" aria-labelledby="museum">
+            <button
+                    class="button tab__link tab__link_active"
+                    data-name="buildings"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="buildings"
+            >
+                Здания
+            </button>
+            <button
+                    class="button tab__link"
+                    data-name="history"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="history"
+                    tabindex="-1"
+            >
+                История
+            </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="buildings" class="tab__content tab__content_active" role="tabpanel" aria-labelledby="buildings" tabindex="0">
+            <ul class="card-list" role="list">
+                <li class="card">
+                    <img src="/src/img/buildings/richter.png" alt="" class="card__img" />
+                    <h3 class="card__title">Мемориальная квартира С.Т.Рихтера</h3>
+                    <p class="card__text">
+                        ул. Большая Бронная, 2/6, 16 этаж, кв. 58
+                    </p>
+                    <a href="/404.html" class="link card__link" aria-label="Подробнее о Мемориальной квартире Рихтера">
+                        Подробнее
+                    </a>
+                </li>
+                <li class="card">
+                    <img src="/src/img/buildings/museion.png" alt="" class="card__img" />
+                    <h3 class="card__title">ЦЭВ «Мусейон»</h3>
+                    <p class="card__text">
+                        Колымажный пер., 6/2, 3 (вход с Малого Знаменского переулка)
+                    </p>
+                    <a href="/404.html" class="link card__link" aria-label="Подробнее о ЦЭВ «Мусейон»">
+                        Подробнее
+                    </a>
+                </li>
+                <li class="card">
+                    <img src="/src/img/buildings/lopukhinykh.png" alt="" class="card__img" />
+                    <h3 class="card__title">Усадьба Лопухиных</h3>
+                    <p class="card__text">
+                        Малый Знаменский пер., 3/5с4
+                    </p>
+                    <a href="/404.html" class="link card__link" aria-label="Подробнее об усадьбе Лопухиных">
+                        Подробнее
+                    </a>
+                </li>
+                <li class="card">
+                    <img src="/src/img/buildings/uchebniy.png" alt="" class="card__img" />
+                    <h3 class="card__title">Учебный музей</h3>
+                    <p class="card__text">
+                        ул. Чаянова, 15
+                    </p>
+                    <a href="/404.html" class="link card__link" aria-label="Подробнее об Учебном музее">
+                        Подробнее
+                    </a>
+                </li>
+                <li class="card">
+                    <img src="/src/img/buildings/personal-collections.png" alt="" class="card__img" />
+                    <h3 class="card__title">Отдел личных коллекций</h3>
+                    <p class="card__text">
+                        ул. Волхонка, 10
+                    </p>
+                    <a href="/404.html" class="link card__link" aria-label="Подробнее об Отделе личных коллекций">
+                        Подробнее
+                    </a>
+                </li>
+                <li class="card">
+                    <img src="/src/img/buildings/richter.png" alt="" class="card__img" />
+                    <h3 class="card__title">Галерея</h3>
+                    <p class="card__text">
+                        ул. Волхонка, 14
+                    </p>
+                    <a href="/404.html" class="link card__link" aria-label="Подробнее о Галерее">
+                        Подробнее
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="history" class="tab__content" role="tabpanel" aria-labelledby="history" tabindex="0">
+            <p class="text-block">
+                Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.
+            </p>
+            <p class="text-block">
+                В современной экспозиции представлены обширная учебная коллекция тонированных гипсовых слепков с произведений Античности, Средних веков и эпохи Возрождения, а также собрание подлинных произведений живописи, скульптуры, графики и декоративно-прикладного искусства.
+            </p>
+            <p class="text-block">
+                В залах первого этажа Главного здания представлены: произведения искусства Древнего Египта, Античности, собрание европейской живописи VIII–XVIII веков; два зала – Итальянский и Греческий дворики – занимают слепки. На втором этаже Главного здания в залах размещены слепки произведений искусства Древней Греции, Рима, Средних веков и Возрождения.
+            </p>
+            <p class="text-block">
+                В начале 2017 года музей определил новое направление своей деятельности – Пушкинский XXI, – ориентированное на современное российское и западное искусство во всех аспектах – выставочном, образовательном и исследовательском. Таким образом, ГМИИ им. А.С. Пушкина представляет собой открытую, интерактивную сцену, демонстрирующую развитие мировой культуры с древности до наших дней, живое, знакомое с детства пространство для получения знаний и общения.
+            </p>
+            <a href="/404.html" class="text-block link" aria-label="Читать далее об истории музея">Читать далее</a>
+        </div>
     </section>
 
-    <section> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
-        <h2>Музей</h2>
-    </section>
+<!--    <section class="section"> &lt;!&ndash; тут что-то нужно задать, чтобы заголовок был (или не нужно) &ndash;&gt;
+        <h2 class="title">Онлайн-трансляции</h2>
+    </section>-->
 
-    <section> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
-        <h2>Онлайн-трансляции</h2>
-    </section>
-
-    <section> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
-        <h2>Экскурсии и лекции в прямом эфире</h2>
+    <section class="section" id="visitors"> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
+        <h2 class="title">Посетителям</h2>
+        <p class="text-block">
+            С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям — экскурсиям и лекциям
+            для взрослых и детей, оплатив участие на сайте. Встречи будут проходить в прямом эфире
+            на платформе Zoom; предусмотрен формат живого общения с возможностью задавать вопросы
+            экскурсоводу (лектору).
+            <br />
+            <a href="/404.html" class="link" aria-label="Подробнее о виртуальных мероприятиях">Подробнее</a>
+        </p>
+        <p class="text-block">
+            Мы будем благодарны за любое
+            <a href="/404.html" class="link">пожертвование</a>.
+            Все поступившие средства будут направлены на организацию онлайн-проектов для наших посетителей.
+        </p>
     </section>
 </main>
 
 <footer class="footer">
     <div class="section footer__inner">
         <div>
-            <nav> <!-- TO DO: прописать, что это навигация по футеру -->
-                <a href="">Посетителям с ограниченными возможностями</a>
-                <a href="">Билеты и льготы</a>
-                <a href="">Противодействие коррупции</a>
+            <nav aria-label="Дополнительная правовая информация">
+                <a href="/404.html">Посетителям с ограниченными возможностями</a>
+                <a href="/404.html">Билеты и льготы</a>
+                <a href="/404.html">Противодействие коррупции</a>
             </nav>
             <ul role="list">
                 Соцсети:

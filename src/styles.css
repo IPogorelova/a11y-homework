@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, p {
     border-radius: 8px;
     font-size: 18px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .button_purple {
@@ -388,8 +389,6 @@ h1, h2, h3, h4, h5, p {
     margin-top: 48px;
 }
 
-
-
 /* Footer */
 .footer {
     flex-shrink: 0;
@@ -400,6 +399,43 @@ h1, h2, h3, h4, h5, p {
 
 .footer__inner {
     display: flex;
+    justify-content: space-between;
+}
+
+.footer__block {
+    width: 48%;
+}
+
+.footer__nav a {
+    display: block;
+    margin-top: 16px;
+}
+.footer__nav a:first-child {
+    margin-top: 0;
+}
+
+.socials {
+    display: flex;
+    list-style: none;
+    margin: 0 -14px;
+    padding: 0;
+}
+
+#socials-label {
+    display: block;
+    margin-top: 40px;
+}
+
+.socials__button {
+    display: block;
+    width: fit-content;
+    margin: 16px 10px 0 10px;
+    padding: 4px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.socials__button:disabled {
+    opacity: 0.2;
 }
 
 @media (prefers-reduced-motion) {

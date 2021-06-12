@@ -13,6 +13,22 @@ const DIRECTION = {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+    let searchButton = document.querySelector('#searchButton');
+    searchButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('К сожалению, поиск пока не работает. Спасибо за понимание!');
+    })
+
+    //initialize modal
+    MicroModal.init();
+
+    let loginButton = document.querySelector('#loginButton');
+    loginButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Здесь должна была быть валидация, но она не смогла и очень извиняется :(');
+        MicroModal.close('dialog');
+    })
+
     // initialize slider
     new Glide('.glide', { keyboard: false }).mount();
 

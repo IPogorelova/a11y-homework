@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Сайт музея имени Пушкина</title>
+    <title>Пушкинский музей</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="text/javascript" href="src/script.js" />
+
+    <!-- Carousel Required Core Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 
 <body>
@@ -60,19 +62,73 @@
         </div>
     </div>
     <nav class="main-nav"> <!-- TO DO: прописать, что это навигация по разделам -->
-        <a href="#museum">Музей</a>
-        <a href="#visitors">Посетителям</a>
-        <a href="#exhibitions">Выставки и события</a>
-        <a href="/404.html">Купить билет</a>
-        <a href="/404.html">Стать другом</a>
-        <a href="/404.html">Онлайн-магазин</a>
+        <a href="#museum" class="main-nav__item">Музей</a>
+        <a href="#visitors" class="main-nav__item">Посетителям</a>
+        <a href="#exhibitions" class="main-nav__item">Выставки и события</a>
+        <a href="/404.html" class="main-nav__item">Купить билет</a>
+        <a href="/404.html" class="main-nav__item">Стать другом</a>
+        <a href="/404.html" class="main-nav__item">Онлайн-магазин</a>
     </nav>
 </header>
 
-<main id="main">
+<main id="main" class="section">
+    <section class="glide" aria-roledescription="carousel" aria-label="Главные события музея">
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                <span class="visually-hidden">Следующий слайд</span>
+            </button>
+        </div>
 
-    <section> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
-        <!-- slider -->
+        <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides" aria-atomic="false" aria-live="polite">
+                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="#matisse">
+                    <span class="visually-hidden" id="matisse">От Дюрера до Матисса</span>
+                    <span class="visually-hidden">Откроется в новом окне</span>
+                    <span class="visually-hidden">Избранные рисунки из собрания ГМИИ им. А.С.Пушкина</span>
+                    <span class="visually-hidden">С 10 июля по 1 ноября</span>
+                    <span class="visually-hidden">Главное здание</span>
+                    <a
+                            href="https://pushkinmuseum.art/"
+                            class="button button_size-l button_purple glide-slide__button"
+                            target="_blank"
+                    >
+                        Купить билеты
+                        <span class="visually-hidden">Откроется в новом окне</span>
+                    </a>
+                </div>
+                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="#summer-museion">
+                    <span class="visually-hidden" id="summer-museion">Летняя программа Мусейона</span>
+                    <span class="visually-hidden">С 1 июня по 7 июля</span>
+                    <span class="visually-hidden">Главное здание</span>
+                    <a
+                            href="https://pushkinmuseum.art/events/archive/2021/others/summer/index.php"
+                            class="button button_size-l button_purple glide-slide__button"
+                            target="_blank"
+                    >
+                        Посмотреть программу
+                        <span class="visually-hidden">Откроется в новом окне</span>
+                    </a>
+                </div>
+                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="#tiepolo">
+                    <span class="visually-hidden" id="tiepolo">
+                        Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико
+                    </span>
+                    <span class="visually-hidden">С 11 февраля 2021 года по 1 ноября 2022 года</span>
+                    <span class="visually-hidden">Главное здание</span>
+                    <a
+                            href="https://pushkinmuseum.art/events/archive/2021/exhibitions/siena/index.php"
+                            class="button button_size-l button_purple glide-slide__button"
+                            target="_blank"
+                    >
+                        Посмотреть программу
+                        <span class="visually-hidden">Откроется в новом окне</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
@@ -92,44 +148,49 @@
     </section>
 </main>
 
-<footer>
-    <div>
-        <nav> <!-- TO DO: прописать, что это навигация по футеру -->
-            <a href="">Посетителям с ограниченными возможностями</a>
-            <a href="">Билеты и льготы</a>
-            <a href="">Противодействие коррупции</a>
-        </nav>
-        <ul role="list">
-            Соцсети:
-            <li>
-                <a href="#" aria-label="Email">
-                    <!-- svg icon -->
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-label="Telegram">
-                    <!-- svg icon -->
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-label="Facebook">
-                    <!-- svg icon -->
-                </a>
-            </li>
-        </ul>
+<footer class="footer">
+    <div class="section footer__inner">
+        <div>
+            <nav> <!-- TO DO: прописать, что это навигация по футеру -->
+                <a href="">Посетителям с ограниченными возможностями</a>
+                <a href="">Билеты и льготы</a>
+                <a href="">Противодействие коррупции</a>
+            </nav>
+            <ul role="list">
+                Соцсети:
+                <li>
+                    <a href="#" aria-label="Email">
+                        <!-- svg icon -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Telegram">
+                        <!-- svg icon -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="Facebook">
+                        <!-- svg icon -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <form>
+            <p>Подписка на новости</p>
+            <label>
+                Email
+                <input type="email" />
+            </label>
+            <button type="submit" disabled aria-disabled="true">Подписаться</button>
+            <label>
+                <input type="checkbox" required aria-required="true" />
+                Согласен на обработку персональных данных
+            </label>
+        </form>
     </div>
-    <form>
-        <p>Подписка на новости</p>
-        <label>
-            Email
-            <input type="email" />
-        </label>
-        <button type="submit" disabled aria-disabled="true">Подписаться</button>
-        <label>
-            <input type="checkbox" required aria-required="true" />
-            Согласен на обработку персональных данных
-        </label>
-    </form>
 </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+<script type="text/javascript" src="src/script.js"></script>
 </body>
 </html>

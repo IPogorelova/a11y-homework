@@ -78,21 +78,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Bind listeners
-    // for (i = 0; i < tabs.length; ++i) {
-    //     addListeners(i);
-    // };
-
-    // function addListeners (index) {
-    //     tabs[index].addEventListener('click', clickEventListener);
-    //     tabs[index].addEventListener('keydown', keydownEventListener);
-    //     tabs[index].addEventListener('keyup', keyupEventListener);
-    //
-    //     // Build an array with all tabs (<button>s) in it
-    //     tabs[index].index = index;
-    // };
-    // keydownEventListener();
-
     // control tabs
     tabs.forEach((item, index) => {
         tabs[index].index = index;

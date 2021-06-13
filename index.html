@@ -21,7 +21,7 @@
 
 <body>
 <header class="header section section_mt-0">
-    <h1 hidden>Государственный музей изобразительных искусств имени А.С.Пушкина</h1>
+    <h1 class="visually-hidden">Государственный музей изобразительных искусств имени А.С.Пушкина</h1>
     <a href="#main" class="button button_blue skip-to-main">Skip to main</a>
     <div class="header__inner">
         <a href="/" class="header__logo" aria-label="На главную страницу">
@@ -30,7 +30,7 @@
         <div class="header__buttons">
             <form class="search">
                 <label for="search" class="visually-hidden">Поиск по сайту</label>
-                <input type="search" id="search" role="search" class="search__input" />
+                <input type="search" id="search" role="search" class="search__input" placeholder="Искать на сайте" />
                 <button
                         id="searchButton"
                         class="search__button"
@@ -103,7 +103,8 @@
 </header>
 
 <main id="main">
-    <section class="section glide" id=exhibitions aria-roledescription="carousel" aria-label="Главные события музея">
+    <section class="section glide" id=exhibitions aria-roledescription="carousel" aria-labelledby="eventsTitle">
+        <h2 class="visually-hidden" id="eventsTitle">Главные события музея</h2>
         <div class="glide__arrows" data-glide-el="controls">
             <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
                 <span class="visually-hidden">Предыдущий слайд</span>
@@ -162,11 +163,11 @@
         </div>
     </section>
 
-    <!--<section> &lt;!&ndash; тут что-то нужно задать, чтобы заголовок был (или не нужно) &ndash;&gt;
+    <!--<section>
         <h2 class="title">Выставки и события</h2>
     </section>-->
 
-    <section class="section"> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
+    <section class="section">
         <h2 class="title" id="museum">Музей</h2>
 
         <!-- Tab links -->
@@ -275,11 +276,11 @@
         </div>
     </section>
 
-<!--    <section class="section"> &lt;!&ndash; тут что-то нужно задать, чтобы заголовок был (или не нужно) &ndash;&gt;
+    <!--<section class="section">
         <h2 class="title">Онлайн-трансляции</h2>
     </section>-->
 
-    <section class="section" id="visitors"> <!-- тут что-то нужно задать, чтобы заголовок был (или не нужно) -->
+    <section class="section" id="visitors">
         <h2 class="title">Посетителям</h2>
         <p class="text-block">
             С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям — экскурсиям и лекциям

@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, p {
     width: 73px;
     height: 100%;
     padding: 0;
-    background-image: url("/src/img/arrow-icon.svg");
+    background-image: url("https://ipogorelova.github.io/a11y-homework/src/img/arrow-icon.svg");
     background-position: center left;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -295,17 +295,17 @@ h1, h2, h3, h4, h5, p {
     cursor: grab;
 }
 .glide__slide:first-child {
-    background-image: url("/src/img/exhibition.png");
+    background-image: url("https://ipogorelova.github.io/a11y-homework/src/img/exhibition.png");
 }
 .glide__slide:nth-child(2) {
-    background-image: url("/src/img/exhibition2.jpg");
+    background-image: url("https://ipogorelova.github.io/a11y-homework/src/img/exhibition2.jpg");
 }
 .glide__slide:nth-child(2) .glide-slide__button {
     margin-left: auto;
     margin-right: auto;
 }
 .glide__slide:nth-child(3) {
-    background-image: url("/src/img/exhibition3.jpeg");
+    background-image: url("https://ipogorelova.github.io/a11y-homework/src/img/exhibition3.jpeg");
 }
 
 .glide-slide__button {

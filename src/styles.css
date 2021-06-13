@@ -391,6 +391,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .card__title {
+    display: block;
     margin-top: 24px;
     font-size: 26px;
     font-weight: normal;

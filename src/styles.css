@@ -62,6 +62,10 @@ h1, h2, h3, h4, h5, p {
     text-decoration: none;
     cursor: pointer;
 }
+.button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
 
 .button_purple {
     background-color: #5D16D5;
@@ -76,6 +80,10 @@ h1, h2, h3, h4, h5, p {
     background-color: #1a063b;
     border-color: #1a063b;
 }
+.button_purple:disabled:hover, .button_purple:disabled:focus {
+    background-color: #5D16D5;
+    border-color: #5D16D5;
+}
 
 .button_blue {
     background-color: #C7D2E9;
@@ -89,6 +97,10 @@ h1, h2, h3, h4, h5, p {
 .button_blue:active {
     background-color: #728dc7;
     border-color: #728dc7;
+}
+.button_blue:disabled:hover, .button_blue:disabled:focus {
+    background-color: #8aa1d1;
+    border-color: #8aa1d1;
 }
 
 .button_size-s {
@@ -437,6 +449,57 @@ h1, h2, h3, h4, h5, p {
 .socials__button:disabled {
     opacity: 0.2;
 }
+
+.footer-form {
+    position: relative;
+    width: 485px;
+}
+
+.footer-form__title {
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.footer-form__label {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form__input {
+    max-width: 305px;
+    margin-top: 6px;
+    padding: 8px 12px 8px 0;
+    font-size: 18px;
+    /*line-height: 24px;*/
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+.footer-form__input:focus {
+    border-color: #000000;
+}
+
+.footer-form__check {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.footer-form__checkbox {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 0 0;
+}
+
+.footer-form__button {
+    position: absolute;
+    top: 83px;
+    right: 0;
+}
+
 
 @media (prefers-reduced-motion) {
     body {

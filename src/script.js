@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let loginButton = document.querySelector('#loginButton');
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('Здесь должна была быть валидация, но она не смогла и очень извиняется :(');
+        alert('Здесь должна была быть валидация, но она не смогла и очень извиняется :( \nК сожалению, форма не будет отправлена.');
         MicroModal.close('dialog');
     })
 
@@ -101,5 +101,36 @@ window.addEventListener('DOMContentLoaded', () => {
             openTab(e, e.currentTarget.dataset.name);
         });
         item.addEventListener('keydown', keydownEventListener);
+    });
+
+
+    // footer form
+    let inputSubscribe = document.querySelector('.footer-form__input');
+    let checkboxSubscribe = document.querySelector('.footer-form__checkbox');
+    let buttonSubscribe = document.querySelector('.footer-form__button');
+
+    inputSubscribe.addEventListener('keyup', () => {
+        if (inputSubscribe.value !== '' && checkboxSubscribe.checked) {
+            buttonSubscribe.setAttribute('aria-disabled', 'false');
+            buttonSubscribe.removeAttribute('disabled');
+        } else {
+            buttonSubscribe.setAttribute('aria-disabled', 'true');
+            !buttonSubscribe.hasAttribute('disabled') && buttonSubscribe.setAttribute('disabled', '');
+        }
+    });
+
+    checkboxSubscribe.addEventListener('change', () => {
+        if (inputSubscribe.value !== '' && checkboxSubscribe.checked)  {
+           buttonSubscribe.setAttribute('aria-disabled', 'false');
+           buttonSubscribe.removeAttribute('disabled');
+       } else {
+            buttonSubscribe.setAttribute('aria-disabled', 'true');
+            !buttonSubscribe.hasAttribute('disabled') && buttonSubscribe.setAttribute('disabled', '');
+        }
+    });
+
+    buttonSubscribe.addEventListener('click', (e) => {
+       e.preventDefault();
+       alert('Здесь должна была быть валидация, но она не смогла и очень извиняется :( \nК сожалению, форма не будет отправлена.');
     });
 });

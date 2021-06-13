@@ -287,9 +287,11 @@
             для взрослых и детей, оплатив участие на сайте. Встречи будут проходить в прямом эфире
             на платформе Zoom; предусмотрен формат живого общения с возможностью задавать вопросы
             экскурсоводу (лектору).
-            <br />
+            <br /><br />
             <a href="/404.html" class="link" aria-label="Подробнее о виртуальных мероприятиях">Подробнее</a>
         </p>
+        <br />
+        <br />
         <p class="text-block">
             Мы будем благодарны за любое
             <a href="/404.html" class="link">пожертвование</a>.
@@ -302,41 +304,59 @@
     <div class="section section_mt-0 footer__inner">
         <div class="footer__block">
             <nav class="footer__nav" aria-label="Дополнительная правовая информация">
-                <a href="/404.html">Посетителям с ограниченными возможностями</a>
-                <a href="/404.html">Билеты и льготы</a>
-                <a href="/404.html">Противодействие коррупции</a>
+                <a href="/404.html" class="link">Посетителям с инвалидностью</a>
+                <a href="/404.html" class="link">Билеты и льготы</a>
+                <a href="/404.html" class="link">Противодействие коррупции</a>
             </nav>
             <span id="socials-label">Соцсети:</span>
             <ul class="socials" role="list" aria-labelledby="Соцсети">
                 <li>
-                    <button class="socials__button" disabled aria-disabled="true" aria-label="Email">
+                    <a
+                        href="mailto:prpushkin@mail.ru"
+                        class="socials__button"
+                        aria-labelledby="email-link"
+                    >
                         <img src="src/img/email.svg" alt="" />
-                    </button>
+                        <span class="visually-hidden" id="email-link">Написать письмо</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="socials__button" disabled aria-disabled="true" aria-label="Telegram">
+                    <a
+                        href="https://t.me/theartsmuseum"
+                        class="socials__button"
+                        aria-labelledby="tg-link"
+                    >
                         <img src="src/img/telegram.svg" alt="" />
-                    </button>
+                        <span class="visually-hidden" lang="en" id="tg-link">Telegram</span>
+                    </a>
                 </li>
                 <li>
-                    <button class="socials__button" disabled aria-disabled="true" aria-label="Facebook">
+                    <a
+                        href="https://www.facebook.com/theartsmuseum/"
+                        class="socials__button"
+                        aria-labelledby="fb-link new-window"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <img src="src/img/facebook.svg" alt="" />
-                    </button>
+                        <span class="visually-hidden" lang="en" id="fb-link">Facebook</span>
+                        <span class="visually-hidden" id="new-window">Откроется в новом окне</span>
+                    </a>
                 </li>
             </ul>
         </div>
-        <!--<form>
-            <p>Подписка на новости</p>
-            <label>
+        <form class="footer-form">
+            <p class="footer-form__title">Подписаться на новости музея</p>
+            <label class="footer-form__label">
                 Email
-                <input type="email" />
+                <input type="email" class="footer-form__input" required aria-required="true" autocomplete="email" placeholder="example@mail.com" />
             </label>
-            <label>
-                <input type="checkbox" required aria-required="true" />
+            <label class="footer-form__check">
+                <input type="checkbox" class="footer-form__checkbox" required aria-required="true" />
                 Согласен на обработку персональных данных
             </label>
-            <button type="submit" disabled aria-disabled="true">Подписаться</button>
-        </form>-->
+            <button type="submit" class="button button_purple footer-form__button" disabled aria-disabled="true">Подписаться</button>
+        </form>
     </div>
 </footer>
 

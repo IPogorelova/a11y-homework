@@ -66,27 +66,27 @@
             <div class="modal micromodal-slide" id="dialog" aria-hidden="true">
                 <div class="modal__overlay" tabindex="-1" data-micromodal-close>
                     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                        <header class="modal__header">
+                        <div class="modal__header">
                             <button class="modal__close" aria-label="Закрыть модальное окно" data-micromodal-close></button>
                             <h2 class="title modal__title" id="modal-1-title">
                                 Вход в личный кабинет
                             </h2>
-                        </header>
-                        <main class="modal__content" id="modal-1-content">
+                        </div>
+                        <div class="modal__content" id="modal-1-content">
                             <form class="modal-form">
                                 <label class="modal-form__label">
                                     <span class="modal-form__label-text" aria-label="Введите ваш логин">Логин</span>
-                                    <input type="text" class="modal__input" />
+                                    <input type="text" class="modal__input" required aria-required="true" autocomplete="login" />
                                 </label>
                                 <label class="modal-form__label" aria-label="Введите ваш пароль">
                                     <span class="modal-form__label-text">Пароль</span>
-                                    <input type="password" class="modal__input" />
+                                    <input type="password" class="modal__input" required aria-required="true" autocomplete="password" />
                                 </label>
                             </form>
-                        </main>
-                        <footer class="modal__footer">
-                            <button id="loginButton" class="button button_blue" aria-label="Войти">Войти</button>
-                        </footer>
+                        </div>
+                        <div class="modal__footer">
+                            <button id="loginButton" class="button button_size-l button_blue" aria-label="Войти">Войти</button>
+                        </div>
                     </div>
                 </div>
             </div>

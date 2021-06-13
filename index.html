@@ -28,9 +28,9 @@
             <img src="https://ipogorelova.github.io/a11y-homework/src/img/logo-main.svg" alt="" />
         </a>
         <div class="header__buttons">
-            <form class="search">
+            <form class="search" role="search">
                 <label for="search" class="visually-hidden">Поиск по сайту</label>
-                <input type="search" id="search" role="search" class="search__input" placeholder="Искать на сайте" />
+                <input type="search" id="search" class="search__input" placeholder="Искать на сайте" />
                 <button
                         id="searchButton"
                         class="search__button"
@@ -76,11 +76,11 @@
                             <form class="modal-form">
                                 <label class="modal-form__label">
                                     <span class="modal-form__label-text" aria-label="Введите ваш логин">Логин</span>
-                                    <input type="text" class="modal__input" required aria-required="true" autocomplete="login" />
+                                    <input type="text" class="modal__input" required aria-required="true" autocomplete="username" />
                                 </label>
                                 <label class="modal-form__label" aria-label="Введите ваш пароль">
                                     <span class="modal-form__label-text">Пароль</span>
-                                    <input type="password" class="modal__input" required aria-required="true" autocomplete="password" />
+                                    <input type="password" class="modal__input" required aria-required="true" autocomplete="current-password" />
                                 </label>
                             </form>
                         </div>
@@ -116,7 +116,7 @@
 
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides" aria-atomic="false" aria-live="polite">
-                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="#matisse">
+                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="matisse">
                     <span class="visually-hidden" id="matisse">От Дюрера до Матисса</span>
                     <span class="visually-hidden">Откроется в новом окне</span>
                     <span class="visually-hidden">Избранные рисунки из собрания ГМИИ им. А.С.Пушкина</span>
@@ -131,7 +131,7 @@
                         <span class="visually-hidden">Откроется в новом окне</span>
                     </a>
                 </div>
-                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="#summer-museion">
+                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="summer-museion">
                     <span class="visually-hidden" id="summer-museion">Летняя программа Мусейона</span>
                     <span class="visually-hidden">С 1 июня по 7 июля</span>
                     <span class="visually-hidden">Главное здание</span>
@@ -144,7 +144,7 @@
                         <span class="visually-hidden">Откроется в новом окне</span>
                     </a>
                 </div>
-                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="#tiepolo">
+                <div class="glide__slide glide-slide" role="group" aria-roledescription="slide" aria-labelledby="tiepolo">
                     <span class="visually-hidden" id="tiepolo">
                         Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико
                     </span>

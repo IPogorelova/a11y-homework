@@ -174,19 +174,19 @@ h1, h2, h3, h4, h5, p {
 
 .search__button {
     position: absolute;
-    top: 0;
+    top: 1px;
     bottom: 0;
-    right: 0;
+    right: 1px;
     left: auto;
     width: 48px;
-    height: 48px;
+    height: 47px;
     background-color: transparent;
     border: transparent;
     border-radius: 48px;
     cursor: pointer;
 }
 .search__button:hover, .search__button:focus {
-    background-color: #C7D2E9;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Language picker */
@@ -276,6 +276,11 @@ h1, h2, h3, h4, h5, p {
     right: -73px;
     transform: rotate(180deg);
 }
+.glide__arrow--left:hover, .glide__arrow--left:focus,
+.glide__arrow--right:hover, .glide__arrow--right:focus {
+    background-position-x: 10px;
+}
+
 
 .glide__track {
     height: 100%;
